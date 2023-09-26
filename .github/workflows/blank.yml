@@ -1,4 +1,5 @@
 name: Metrics
+
 on:
   # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
@@ -15,3 +16,4 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.PROFILE }}
+          config_presets: https://raw.githubusercontent.com/lowlighter/metrics/presets/lunar-red/preset.yaml
