@@ -15,6 +15,8 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          output_action: gist
+          committer_gist: 9d3bd0a663bc700919ebb4611d067d9f
           template: terminal
           token: ${{ secrets.PROFILE }}
           user: chhroot
