@@ -2,7 +2,7 @@ name: Metrics
 
 on:
   # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
+  schedule: [{cron: "0 16 * * *"}]
   # (optional) Run workflow manually
   workflow_dispatch:
   # (optional) Run workflow when pushing on master/main
@@ -20,7 +20,9 @@ jobs:
           template: terminal
           token: ${{ secrets.PROFILE }}
           user: chhroot
-          base: header, activity, community, repositories, metadata
+          base: header, activity, repositories
+          base_hireable: yes
+          config_display: large
           config_timezone: Asia/Kolkata
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
